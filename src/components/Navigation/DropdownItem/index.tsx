@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import { MouseEventHandler, PropsWithChildren, ReactElement } from 'react';
 import "./DropdownItem.css"
 

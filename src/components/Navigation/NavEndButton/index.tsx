@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import { PropsWithChildren, ReactElement, useEffect, useState } from 'react';
 import './NavEndButton.css';
 
