@@ -7,25 +7,23 @@ import './DropdownMenu.css';
 
 const MainDropdownMenu = ({ activeMenu, setActiveMenu }: DropdownMenuProps) => {
     return (
-        <div className="dropdown">
-            <CSSTransition
-                in={activeMenu === 'main'}
-                unmountOnExit
-                timeout={500}
-                classNames="menu-primary"
-            >
-                <div className="menu">
-                    <DropdownItem>My Profile</DropdownItem>
-                    <DropdownItem
-                        leftIcon={<PaddleIcon />}
-                        rightIcon={<NoodleIcon />}
-                        onClick={() => setActiveMenu('routes')}
-                    >
-                        Routes
-                    </DropdownItem>
-                </div>
-            </CSSTransition>
-        </div>
+        <CSSTransition
+            in={activeMenu === 'main'}
+            unmountOnExit
+            timeout={500}
+            classNames="menu-primary"
+        >
+            <div className="menu">
+                <DropdownItem>My Profile</DropdownItem>
+                <DropdownItem
+                    leftIcon={<PaddleIcon />}
+                    rightIcon={<NoodleIcon />}
+                    onClick={() => setActiveMenu('routes')}
+                >
+                    Routes
+                </DropdownItem>
+            </div>
+        </CSSTransition>
     );
 };
 

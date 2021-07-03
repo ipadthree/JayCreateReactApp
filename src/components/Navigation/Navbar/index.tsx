@@ -1,7 +1,7 @@
-import { PropsWithChildren } from 'react';
+import { PropsWithChildren, useCallback } from 'react';
 import NavEndButton from '../NavEndButton';
 import { useState } from 'react';
-import {MainDropdownMenu} from '../DropdownMenus';
+import DropdownMenu from '../DropdownMenus';
 import { ReactComponent as MoneyIcon } from '../money.svg';
 import { ReactComponent as YinYangIcon } from '../yinyang.svg';
 /**
@@ -15,17 +15,23 @@ import './Navbar.css';
  * https://thekevinscott.com/emojis-in-javascript/
  */
 
-export type menuTypes = "main" | "settings" | "routes";
+export type menuTypes = 'main' | 'settings' | 'routes';
 
 const Navbar = (props: PropsWithChildren<any>): React.ReactElement => {
-    const [activeMenu, setActiveMenu] = useState<menuTypes>("main");
+    const [activeMenu, setActiveMenu] = useState<menuTypes>('main');
+    const clearMenuSelection = useCallback(() => {
+        setActiveMenu('main');
+    }, []);
     return (
         <nav className="global-nav">
             <ul className="navbar-nav">
                 {/**
                  *  String.fromCodePoint(0x1f601) 这个来把codePoint number转化成emoji string
                  */}
-                <NavEndButton icon={String.fromCodePoint(0x1f601)} />
+                <NavEndButton
+                    icon={String.fromCodePoint(0x1f601)}
+                    clearMenuSelection={clearMenuSelection}
+                />
                 {/**
                  * 使用svg的方法：
                  * import paddleSvg from "./paddle.svg";
@@ -40,10 +46,10 @@ const Navbar = (props: PropsWithChildren<any>): React.ReactElement => {
                  *  <NavEndButton icon={<PaddleIcon />} />
                  * 直接把svg当成 ReactComponent import
                  */}
-                <NavEndButton icon={<MoneyIcon />} />
-                <NavEndButton icon="⚽" />
-                <NavEndButton icon={<YinYangIcon />}>
-                    <MainDropdownMenu activeMenu={activeMenu} setActiveMenu={setActiveMenu}/>
+                <NavEndButton icon={<MoneyIcon />} clearMenuSelection={clearMenuSelection} />
+                <NavEndButton icon="⚽" clearMenuSelection={clearMenuSelection} />
+                <NavEndButton icon={<YinYangIcon />} clearMenuSelection={clearMenuSelection}>
+                    <DropdownMenu activeMenu={activeMenu} setActiveMenu={setActiveMenu} />
                 </NavEndButton>
             </ul>
         </nav>
