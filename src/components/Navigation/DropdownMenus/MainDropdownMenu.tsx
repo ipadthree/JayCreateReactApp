@@ -1,7 +1,7 @@
 import DropdownItem from '../DropdownItem';
 import { CSSTransition } from 'react-transition-group';
-import { ReactComponent as PaddleIcon } from '../paddle.svg';
-import { ReactComponent as NoodleIcon } from '../noodle.svg';
+import { ReactComponent as PaddleIcon } from '../../../svg/paddle.svg';
+import { ReactComponent as NoodleIcon } from '../../../svg/noodle.svg';
 import { ChildDropdownMenuProps } from '.';
 import './DropdownMenu.css';
 

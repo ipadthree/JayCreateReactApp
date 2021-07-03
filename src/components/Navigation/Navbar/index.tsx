@@ -2,8 +2,8 @@ import { PropsWithChildren, useCallback } from 'react';
 import NavEndButton from '../NavEndButton';
 import { useState } from 'react';
 import DropdownMenu from '../DropdownMenus';
-import { ReactComponent as MoneyIcon } from '../money.svg';
-import { ReactComponent as YinYangIcon } from '../yinyang.svg';
+import { ReactComponent as MoneyIcon } from '../../../svg/money.svg';
+import { ReactComponent as YinYangIcon } from '../../../svg/yinyang.svg';
 /**
  * 这样我确实实验过了，如果index.css里有App-logo的style，那里设置的style也会影响到这里。
  */
