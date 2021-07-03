@@ -1,20 +1,21 @@
-import { PropsWithChildren, ReactElement } from 'react';
+import { MouseEventHandler, PropsWithChildren, ReactElement } from 'react';
 import "./DropdownItem.css"
 
 interface DropdownItemProps {
     leftIcon?: ReactElement;
     rightIcon?: ReactElement;
+    onClick?: MouseEventHandler<HTMLAnchorElement>;
 }
 
 const DropdownItem = (props: PropsWithChildren<DropdownItemProps>) => {
     return (
-        <a href="#" className="menu-item">
+        <a href="#" className="menu-item" onClick={props.onClick}>
             {/**
              * 这个icon-button的css是在NavItem.css里
              */}
             <span className="icon-button">{props.leftIcon}</span>
             {props.children}
-            <span className="icon-right">{props.rightIcon}</span>
+            <span className={`${props.rightIcon ? "icon-button": ""} icon-right`}>{props.rightIcon}</span>
         </a>
     );
 };

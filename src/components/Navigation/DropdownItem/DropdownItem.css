@@ -17,4 +17,5 @@
 
 a.menu-item {
     text-decoration: none;
+    color: var(--text-color);
 }
