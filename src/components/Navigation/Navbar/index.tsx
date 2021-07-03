@@ -1,5 +1,6 @@
 import { PropsWithChildren } from 'react';
-import NavItem from '../NavItem';
+import NavEndButton from '../NavEndButton';
+import DropdownMenu from '../DropdownMenu';
 import { ReactComponent as MoneyIcon } from '../money.svg';
 import { ReactComponent as YinYangIcon } from '../yinyang.svg';
 /**
@@ -13,6 +14,8 @@ import './Navbar.css';
  * https://thekevinscott.com/emojis-in-javascript/
  */
 
+export type menuTypes = "main" | "settings" | "routes";
+
 const Navbar = (props: PropsWithChildren<any>): React.ReactElement => {
     return (
         <nav className="global-nav">
@@ -20,24 +23,26 @@ const Navbar = (props: PropsWithChildren<any>): React.ReactElement => {
                 {/**
                  *  String.fromCodePoint(0x1f601) 这个来把codePoint number转化成emoji string
                  */}
-                <NavItem icon={String.fromCodePoint(0x1f601)} />
+                <NavEndButton icon={String.fromCodePoint(0x1f601)} />
                 {/**
                  * 使用svg的方法：
                  * import paddleSvg from "./paddle.svg";
                  * ...
-                 *  <NavItem icon={<img src={paddleSvg} alt="paddle"/>} />
+                 *  <NavEndButton icon={<img src={paddleSvg} alt="paddle"/>} />
                  * 这样把svg放到img里面作为img的source，这样的话import就是上面这样
                  * import paddleSvg from "./paddle.svg";
                  *
                  * 或者就是如下这种
                  * import { ReactComponent as PaddleIcon } from './paddle.svg';
                  * ...
-                 *  <NavItem icon={<PaddleIcon />} />
+                 *  <NavEndButton icon={<PaddleIcon />} />
                  * 直接把svg当成 ReactComponent import
                  */}
-                <NavItem icon={<MoneyIcon />} />
-                <NavItem icon="⚽" />
-                <NavItem icon={<YinYangIcon />}></NavItem>
+                <NavEndButton icon={<MoneyIcon />} />
+                <NavEndButton icon="⚽" />
+                <NavEndButton icon={<YinYangIcon />}>
+                    <DropdownMenu activeMenu="main"/>
+                </NavEndButton>
             </ul>
         </nav>
     );
