@@ -2,7 +2,7 @@
 // BrowserRouter会keep URL 与 浏览器一致
 // MemoryRouter会把url存在memory里，适合React Native用
 import { BrowserRouter } from 'react-router-dom';
-import AppContent from '../AppContent';
+import AppContent from '../Routes';
 import Navbar from '../Navigation/Navbar';
 import './App.css';
 

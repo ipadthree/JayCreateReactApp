@@ -2,9 +2,12 @@ import DropdownItem from '../DropdownItem';
 import { ChildDropdownMenuProps } from '.';
 import { CSSTransition } from 'react-transition-group';
 import { ReactComponent as ReturnBackArrowIcon } from '../../../svg/returnBackArrow.svg';
+import { useHistory } from 'react-router-dom';
+import { RoutesEnum } from '../../../models/RoutesEnum';
 import './DropdownMenu.css';
 
 const RoutesDropdownMenu = ({ activeMenu, calcHeight, setActiveMenu }: ChildDropdownMenuProps) => {
+    const history = useHistory();
     return (
         <CSSTransition
             in={activeMenu === 'routes'}
@@ -15,7 +18,7 @@ const RoutesDropdownMenu = ({ activeMenu, calcHeight, setActiveMenu }: ChildDrop
         >
             <div className="menu">
                 <DropdownItem leftIcon={<ReturnBackArrowIcon />} onClick={() => setActiveMenu('main')}>Back to last menu</DropdownItem>
-                <DropdownItem>Setting</DropdownItem>
+                <DropdownItem onClick={() => history.push(RoutesEnum.todo)}>Todo List</DropdownItem>
             </div>
         </CSSTransition>
     );
