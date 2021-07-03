@@ -4,6 +4,7 @@ import { CSSTransition } from 'react-transition-group';
 import { ReactComponent as ReturnBackArrowIcon } from '../../../svg/returnBackArrow.svg';
 import { ReactComponent as TodoIcon } from '../../../svg/todo.svg';
 import { ReactComponent as GalleryIcon } from '../../../svg/gallery.svg';
+import { ReactComponent as LookUpIcon } from '../../../svg/lookup.svg';
 import { useHistory } from 'react-router-dom';
 import { RoutesEnum } from '../../../models/RoutesEnum';
 import './DropdownMenu.css';
@@ -30,6 +31,9 @@ const RoutesDropdownMenu = ({ activeMenu, calcHeight, setActiveMenu }: ChildDrop
                 </DropdownItem>
                 <DropdownItem leftIcon={<GalleryIcon />} onClick={() => history.push(RoutesEnum.carousel)}>
                     Carousel
+                </DropdownItem>
+                <DropdownItem leftIcon={<LookUpIcon />} onClick={() => history.push(RoutesEnum.search)}>
+                    Search
                 </DropdownItem>
             </div>
         </CSSTransition>

@@ -4,6 +4,7 @@ import TodoList from '../TodoList';
 import { RoutesEnum } from '../../models/RoutesEnum';
 import Home from '../Home';
 import Carousel from '../Carousel';
+import SearchBar from '../SearchBar';
 
 const AppContent = (): ReactElement => {
     // 用children来render Route component是最推荐的，其他形式是满足之前需要。
@@ -17,6 +18,9 @@ const AppContent = (): ReactElement => {
             </Route>
             <Route path={RoutesEnum.carousel} exact>
                 <Carousel />
+            </Route>
+            <Route path={RoutesEnum.search} exact>
+                <SearchBar />
             </Route>
         </Switch>
     );
