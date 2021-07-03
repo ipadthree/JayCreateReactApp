@@ -1,7 +1,8 @@
 import DropdownItem from '../DropdownItem';
 import { CSSTransition } from 'react-transition-group';
-import { ReactComponent as PaddleIcon } from '../../../svg/paddle.svg';
-import { ReactComponent as NoodleIcon } from '../../../svg/noodle.svg';
+import { ReactComponent as RoutesIcon } from '../../../svg/routes.svg';
+import { ReactComponent as RightDoubleArrowIcon } from '../../../svg/rightDoubleArrow.svg';
+import { ReactComponent as ProfileIcon } from '../../../svg/profile.svg';
 import { ChildDropdownMenuProps } from '.';
 import './DropdownMenu.css';
 
@@ -15,10 +16,10 @@ const MainDropdownMenu = ({ activeMenu, setActiveMenu, calcHeight }: ChildDropdo
             onEnter={calcHeight}
         >
             <div className="menu">
-                <DropdownItem>My Profile</DropdownItem>
+                <DropdownItem leftIcon={<ProfileIcon/>}>My Profile</DropdownItem>
                 <DropdownItem
-                    leftIcon={<PaddleIcon />}
-                    rightIcon={<NoodleIcon />}
+                    leftIcon={<RoutesIcon />}
+                    rightIcon={<RightDoubleArrowIcon />}
                     onClick={() => setActiveMenu('routes')}
                 >
                     Routes
