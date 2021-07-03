@@ -1,6 +1,6 @@
 import { PropsWithChildren } from 'react';
 import NavEndButton from '../NavEndButton';
-import DropdownMenu from '../DropdownMenu';
+import {MainDropdownMenu} from '../DropdownMenus';
 import { ReactComponent as MoneyIcon } from '../money.svg';
 import { ReactComponent as YinYangIcon } from '../yinyang.svg';
 /**
@@ -41,7 +41,7 @@ const Navbar = (props: PropsWithChildren<any>): React.ReactElement => {
                 <NavEndButton icon={<MoneyIcon />} />
                 <NavEndButton icon="⚽" />
                 <NavEndButton icon={<YinYangIcon />}>
-                    <DropdownMenu activeMenu="main"/>
+                    <MainDropdownMenu activeMenu="main"/>
                 </NavEndButton>
             </ul>
         </nav>
