@@ -3,7 +3,7 @@ import NavEndButton from '../NavEndButton';
 import { useState } from 'react';
 import DropdownMenu from '../DropdownMenus';
 import { ReactComponent as MoneyIcon } from '../../../svg/money.svg';
-import { ReactComponent as YinYangIcon } from '../../../svg/yinyang.svg';
+import { ReactComponent as CogIcon } from '../../../svg/cog.svg';
 /**
  * 这样我确实实验过了，如果index.css里有App-logo的style，那里设置的style也会影响到这里。
  */
@@ -48,7 +48,7 @@ const Navbar = (props: PropsWithChildren<any>): React.ReactElement => {
                  */}
                 <NavEndButton icon={<MoneyIcon />} clearMenuSelection={clearMenuSelection} />
                 <NavEndButton icon="⚽" clearMenuSelection={clearMenuSelection} />
-                <NavEndButton icon={<YinYangIcon />} clearMenuSelection={clearMenuSelection}>
+                <NavEndButton icon={<CogIcon />} clearMenuSelection={clearMenuSelection}>
                     <DropdownMenu activeMenu={activeMenu} setActiveMenu={setActiveMenu} />
                 </NavEndButton>
             </ul>
