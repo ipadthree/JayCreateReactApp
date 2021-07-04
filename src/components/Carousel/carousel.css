@@ -1,6 +1,6 @@
-.container {
-    height: 100vh;
-    width: 100vw;
+#container {
+    height: 100%;
+    width: 100vmax;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -10,6 +10,7 @@
 .image {
     opacity: 0;
     transition: all 1s ease-in;
+    height: 100%;
 }
 
 .image.active {

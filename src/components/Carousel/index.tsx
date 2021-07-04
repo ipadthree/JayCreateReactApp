@@ -30,7 +30,7 @@ const Carousel = (): ReactElement => {
      * https://stackoverflow.com/questions/35792275/how-to-force-remounting-on-react-components
      */
     return (
-        <div className="container">
+        <div id="container">
             <button onClick={getPrevious}>Previous</button>
             <img
                 key={currentImage}
