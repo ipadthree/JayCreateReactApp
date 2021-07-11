@@ -5,6 +5,7 @@ import { ReactComponent as ReturnBackArrowIcon } from '../../../svg/returnBackAr
 import { ReactComponent as TodoIcon } from '../../../svg/todo.svg';
 import { ReactComponent as GalleryIcon } from '../../../svg/gallery.svg';
 import { ReactComponent as LookUpIcon } from '../../../svg/lookup.svg';
+import { ReactComponent as TikTokIcon } from '../../../svg/tiktok-logo.svg';
 import { useHistory } from 'react-router-dom';
 import { RoutesEnum } from '../../../models/RoutesEnum';
 import './DropdownMenu.css';
@@ -34,6 +35,9 @@ const RoutesDropdownMenu = ({ activeMenu, calcHeight, setActiveMenu }: ChildDrop
                 </DropdownItem>
                 <DropdownItem leftIcon={<LookUpIcon />} onClick={() => history.push(RoutesEnum.search)}>
                     Search
+                </DropdownItem>
+                <DropdownItem leftIcon={<TikTokIcon />} onClick={() => history.push(RoutesEnum.infiniteScroll)}>
+                    Infinite Scroll
                 </DropdownItem>
             </div>
         </CSSTransition>

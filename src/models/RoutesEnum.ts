@@ -19,5 +19,6 @@ export enum RoutesEnum {
     todo = "/todoList",
     carousel = "/carousel",
     search = "/search",
+    infiniteScroll = "/infiniteScroll",
 }
 // 没有最后的 ;

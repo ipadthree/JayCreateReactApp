@@ -6,6 +6,7 @@ import { RoutesEnum } from '../../models/RoutesEnum';
 import Home from '../Home';
 import Carousel from '../Carousel';
 import SearchBar from '../SearchBar';
+import InfiniteScroll from "../InfiniteScroll";
 
 const Content = styled.section`
     height: calc(100vh - var(--nav-size));
@@ -27,6 +28,9 @@ const AppContent = (): ReactElement => {
                 </Route>
                 <Route path={RoutesEnum.search} exact>
                     <SearchBar />
+                </Route>
+                <Route path={RoutesEnum.infiniteScroll} exact>
+                    <InfiniteScroll />
                 </Route>
             </Switch>
         </Content>
