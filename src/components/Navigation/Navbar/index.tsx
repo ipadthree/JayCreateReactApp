@@ -24,6 +24,14 @@ const Navbar = (props: PropsWithChildren<any>): React.ReactElement => {
     }, []);
     return (
         <nav className="global-nav">
+            <div className='nav-left'>
+                <div className='nav-title'>Jay's app</div>
+                <ul>
+                    <li>
+                        <a href='#'>Retool</a>
+                    </li>
+                </ul>
+            </div>
             <ul className="navbar-nav">
                 {/**
                  *  String.fromCodePoint(0x1f601) 这个来把codePoint number转化成emoji string

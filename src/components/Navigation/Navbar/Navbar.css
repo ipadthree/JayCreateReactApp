@@ -3,6 +3,20 @@ nav.global-nav{
     background-color: var(--bg);
     padding: 0 1rem;
     border-bottom: var(--border);
+    display: flex;
+    justify-content: space-between;
+}
+
+nav div.nav-title {
+    font-size: 2rem;
+}
+
+.global-nav .nav-left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    color: green;
 }
 
 ul {
