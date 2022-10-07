@@ -1,0 +1,63 @@
+.calculator-container {
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(to right, #00aaff, #00ff6c);
+}
+
+.calculator-grid {
+    display: grid;
+    padding-top: 2rem;
+    /*定义有4列，每列6rem*/
+    grid-template-columns: repeat(4, 6rem);
+    /*第一行是minmaxdefine， 剩下5行是repeat定义*/
+    /*row的高度最小7rem，最大根据content自动变*/
+    grid-template-rows: minmax(7rem, auto) repeat(5, 6rem);
+    /*seems doesn't work?*/
+    justify-self: center;
+}
+
+.calculator-grid > button {
+    cursor: pointer;
+    font-size: 2rem;
+    /*最好用这个设置border保证所有选项都选上，能用*/
+    border: 1px solid white;
+    outline: none;
+    background-color: rgba(255, 255, 255, .75);
+}
+
+.calculator-grid > button:hover,
+.calculator-grid > button:focus {
+    background-color: rgba(255, 255, 255, .9);
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+.output {
+    /*相当于
+        grid-column-start: 1;
+        grid-column-end: -1;
+      end 在-1 就表示走到row的end 转一圈
+    */
+    grid-column: 1 / -1;
+    background-color: rgba(0, 0, 0, .75);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: .75rem;
+    /*Allow numbers to be into several lines*/
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.output .previous-operand {
+    color:rgba(255, 255, 255, .75);
+    font-size: 1.5rem;
+}
+
+.output .current-operand {
+    color: white;
+    font-size: 2.5rem;
+}
