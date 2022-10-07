@@ -5,7 +5,12 @@ nav.global-nav{
     border-bottom: var(--border);
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
+/**
+difference between align-items and align-content
+https://stackoverflow.com/questions/27539262/whats-the-difference-between-align-content-and-align-items
+*/
 
 nav div.nav-title {
     font-size: 2rem;
@@ -16,13 +21,10 @@ nav div.nav-title {
     flex-direction: row;
     align-items: center;
     gap: 1rem;
-    color: green;
 }
 
-ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+.global-nav .nav-left .nav-title {
+    color: green;
 }
 
 ul.navbar-nav {
