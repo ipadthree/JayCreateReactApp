@@ -18,8 +18,9 @@
     flex-direction: column;
     align-items: center;
     align-content: space-around;
+    /*row gap 才是上一行和下一行之间的gaps， column是相邻列的gaps*/
+    row-gap: 8px;
 }
-
 
 /*Following are copied css style for glow button*/
 .glow-on-hover {

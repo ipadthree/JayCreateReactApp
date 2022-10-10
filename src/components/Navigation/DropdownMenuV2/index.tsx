@@ -20,6 +20,14 @@ const DropdownMenuV2 = (): React.ReactElement => {
             Calculator
           </button>
         </div>
+        <div className="dropdown-item">
+          <button
+            className="glow-on-hover"
+            onClick={() => history.push(RoutesEnum.tetris)}
+          >
+            Tetris
+          </button>
+        </div>
       </div>
     </div>
   );

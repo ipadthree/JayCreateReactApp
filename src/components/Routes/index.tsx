@@ -8,6 +8,7 @@ import Carousel from "../Carousel";
 import SearchBar from "../SearchBar";
 import InfiniteScroll from "../InfiniteScroll";
 import Calculator from "../Calculator";
+import Tetris from "../Tetris";
 
 const Content = styled.section`
   height: calc(100vh - var(--nav-size));
@@ -35,6 +36,9 @@ const AppContent = (): ReactElement => {
         </Route>
         <Route path={RoutesEnum.calculator} exact>
           <Calculator />
+        </Route>
+        <Route path={RoutesEnum.tetris} exact>
+          <Tetris />
         </Route>
       </Switch>
     </Content>

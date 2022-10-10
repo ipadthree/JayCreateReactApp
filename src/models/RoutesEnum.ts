@@ -21,5 +21,6 @@ export enum RoutesEnum {
     search = "/search",
     infiniteScroll = "/infiniteScroll",
     calculator = '/calculator',
+    tetris='/tetris'
 }
 // 没有最后的 ;
