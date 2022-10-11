@@ -1,0 +1,5 @@
+/* Import new font*/
+@font-face {
+    font-family: 'Pixel';
+    src: url('Assets/Fonts/Tetris/Pixel-LCD-7.woff') format('woff');
+}
