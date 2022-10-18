@@ -16,11 +16,12 @@ const Direction = {
  */
 
 export enum RoutesEnum {
-    todo = "/todoList",
-    carousel = "/carousel",
-    search = "/search",
-    infiniteScroll = "/infiniteScroll",
-    calculator = '/calculator',
-    tetris='/tetris'
+  todo = "/todoList",
+  carousel = "/carousel",
+  search = "/search",
+  infiniteScroll = "/infiniteScroll",
+  calculator = "/calculator",
+  tetris = "/tetris",
+  wordle = "/wordle",
 }
 // 没有最后的 ;

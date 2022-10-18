@@ -9,6 +9,7 @@ import SearchBar from "../SearchBar";
 import InfiniteScroll from "../InfiniteScroll";
 import Calculator from "../Calculator";
 import Tetris from "../Tetris";
+import Wordle from "../Wordle";
 
 const Content = styled.section`
   height: calc(100vh - var(--nav-size));
@@ -39,6 +40,9 @@ const AppContent = (): ReactElement => {
         </Route>
         <Route path={RoutesEnum.tetris} exact>
           <Tetris />
+        </Route>
+        <Route path={RoutesEnum.wordle} exact>
+          <Wordle />
         </Route>
       </Switch>
     </Content>

@@ -28,6 +28,14 @@ const DropdownMenuV2 = (): React.ReactElement => {
             Tetris
           </button>
         </div>
+        <div className="dropdown-item">
+          <button
+            className="glow-on-hover"
+            onClick={() => history.push(RoutesEnum.wordle)}
+          >
+            Wordle
+          </button>
+        </div>
       </div>
     </div>
   );

@@ -1,0 +1,22 @@
+.wordle-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+}
+
+.wordle-container .word-input {
+  width: 280px;
+  height: 30px;
+}
+
+.wordle-container .line-container {
+  display: flex;
+  gap: 5px;
+}
+
+.wordle-container .line-container .tile {
+  width: 50px;
+  height: 50px;
+  border: 2px solid rgb(101, 92, 81);
+}
