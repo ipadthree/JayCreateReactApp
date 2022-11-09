@@ -1,0 +1,43 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  background-color: lightcoral;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.gallery .photo-card {
+  width: 800px;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery .photo-card .photo {
+  opacity: 0;
+  width: 100%;
+  transition: opacity 1s ease-in-out;
+}
+
+.gallery .photo-card .photo.active {
+  opacity: 1;
+}
+
+.gallery .photo-card .actions {
+  height: 50px;
+  display: flex;
+  background-color: lightgreen;
+}
+
+.gallery .photo-card .actions .like {
+  font-size: 20px;
+}
+
+.gallery .button {
+  font-size: 100px;
+}
